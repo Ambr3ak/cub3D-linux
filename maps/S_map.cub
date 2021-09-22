@@ -1,0 +1,12 @@
+NO ./txts/orange_rubiks.xpm
+SO ./txts/blue_rubiks.xpm
+WE ./txts/green_rubiks.xpm
+EA ./txts/red_rubiks.xpm
+S ./txts/barrel.xpm
+
+F 217, 238, 255
+C 14, 39, 0
+
+111
+1E1
+111

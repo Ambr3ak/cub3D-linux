@@ -1,0 +1,17 @@
+        R                  1280              800    
+NO ./txts/orange_rubiks.xpm
+SO ./txts/blue_rubiks.xpm
+WE ./txts/green_rubiks.xpm
+EA ./txts/red_rubiks.xpm
+
+F 217, 238, 255
+C 243, 90, 120
+
+11111111
+10100001
+10100001
+10100001
+10000001
+10000101
+10000001
+11111111
