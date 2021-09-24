@@ -56,10 +56,9 @@ void	ft_malloc_struct(t_map *map)
 	map->proj = malloc_list(map, sizeof(t_render));
 	map->tab = malloc_list(map, sizeof(t_cub));
 	map->play = malloc_list(map, sizeof(t_play));
-	map->sp_data = malloc_list(map, sizeof(t_data));
 	map->color = malloc_list(map, (sizeof(t_color) * 2) + 1);
 	if (!map->tmp || !map->recup || !map->proj
-		|| !map->tab || !map->play || !map->sp_data || !map->color)
+		|| !map->tab || !map->play || !map->color)
 		map->err = -8;
 }
 
@@ -71,7 +70,6 @@ void	init_struc(t_map *map)
 	map->tab->so = 0;
 	map->tab->we = 0;
 	map->tab->ea = 0;
-	map->tab->sp = 0;
 	map->tab->f = 0;
 	map->tab->c = 0;
 	map->tab->x = 0;
@@ -107,7 +105,6 @@ int	init_map_struc(t_map *map, char **str, int i)
 	map->pos_x = 0;
 	map->pos_y = 0;
 	map->player = 0;
-	map->num_sp = 0;
 	map->tab->error = get_player_pos(map);
 	if (!(map->tab->error))
 		map->tab->error = ft_parse_map(map);

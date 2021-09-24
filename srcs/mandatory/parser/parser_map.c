@@ -80,6 +80,6 @@ int	ft_parse_map(t_map *map)
 				return (-5);
 		}
 	}
-	ft_raycasting(map, map->tab);
-	return (0);
+	map->tab->error = ft_raycasting(map, map->tab);
+	return (map->tab->error);
 }

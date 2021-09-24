@@ -1,8 +1,7 @@
-        R                  1280              800    
-NO ./txts/orange_rubiks.xpm
-SO ./txts/blue_rubiks.xpm
-WE ./txts/green_rubiks.xpm
-EA ./txts/red_rubiks.xpm
+NO      ./txts/blue.xpm
+SO ./txts/orange.xpm
+WE ./txts/green.xpm
+EA ./txts/red.xpm
 
 F 217, 238, 255
 C 243, 90, 120

@@ -45,15 +45,3 @@ int	pixel_get_color(t_img *txtrs, int x, int y)
 	color = int_addr[y * txtrs->x + x];
 	return (color);
 }
-
-int	sp_pixel_get_color(t_img *txtrs, int x, int y)
-{
-	int	color;
-	int	*int_addr;
-
-	int_addr = (int *)txtrs->addr;
-	if (x < 0)
-		x = 0;
-	color = int_addr[y * txtrs->x + x];
-	return (color);
-}

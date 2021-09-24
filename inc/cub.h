@@ -87,15 +87,10 @@ void	generate_proj(t_map *map, t_recup *recup);
 
 void	img_pix_put(t_img *img, int x, int y, int color);
 int		pixel_get_color(t_img *txtrs, int x, int y);
-int		sp_pixel_get_color(t_img *txtrs, int x, int y);
 void	norm_angle(float *angle);
 float	distance_points(float x1, float y1, float x2, float y2);
 
-void	show_sp_proj(t_map *map);
-void	render_mapSprite(t_map *map);
 
-void	sp_calc_width(t_data *sp_data, t_sprite sprite, t_map *map);
-void	sp_display_calc(t_data *sp_data, t_sprite sprite, t_map *map);
 void	load_textures(t_cub *tab, t_map *map);
 
 void	scale_calc(t_map *map);
@@ -109,7 +104,6 @@ void	draw_line(t_img *img, t_line line);
 int		draw_rect(t_img *img, t_rect rect);
 
 void	draw_tiles(int x, int y, t_map *map, int color);
-int		has_sprite_at(float x, float y, t_map *map);
 void	draw_transparency(t_map *map, int x, int y, int color);
 
 void	get_screen_size(t_map *map);

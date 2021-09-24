@@ -29,26 +29,9 @@
 # define TRUE 1
 # define TEX_H 64
 
-typedef struct s_sprite
-{
-	float	x;
-	float	y;
-	float	distance;
-	float	angle;
-	int		texture;
-	int		visible;
-}				t_sprite;
 
 typedef struct s_data
 {
-	float	sprite_height;
-	float	sprite_width;
-	float	sprite_topy;
-	float	sprite_bottomy;
-	float	sprite_angle;
-	float	sprite_screen_x;
-	float	sprite_left_x;
-	float	sprite_right_x;
 	float	texel_w;
 	int		dist_top;
 	int		offset_y;
@@ -63,7 +46,6 @@ typedef struct s_cub
 	char	*path_so;
 	char	*path_we;
 	char	*path_ea;
-	char	*path_sp;
 	int		no;
 	int		so;
 	int		r;
@@ -196,8 +178,6 @@ typedef struct s_map
 	int			num_rays;
 	int			num_col;
 	int			num_row;
-	int			num_sp;
-	int			nm_vsb_sp;
 	float		scale;
 	char		*str;
 	int			x;
@@ -217,11 +197,8 @@ typedef struct s_map
 	t_cub		*tab;
 	t_rays		*rays;
 	t_tmp		*tmp;
-	t_sprite	*sprite;
-	t_sprite	cur_sp;
 	t_recup		*recup;
 	t_render	*proj;
-	t_data		*sp_data;
 }				t_map;
 
 #endif

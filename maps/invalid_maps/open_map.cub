@@ -1,8 +1,8 @@
-NO ./txts/orange_rubiks.xpm
-SO ./txts/blue_rubiks.xpm
-WE ./txts/green_rubiks.xpm
-EA ./txts/red_rubiks.xpm
-S ./txts/barrel.xpm
+NO      ./txts/blue.xpm
+SO ./txts/orange.xpm
+WE ./txts/green.xpm
+EA ./txts/red.xpm
+
 
 F 210, 238, 255
 C 74, 39, 0

@@ -18,9 +18,3 @@ void	draw_tiles(int x, int y, t_map *map, int color)
 		y * map->scale, map->tile_sz * map->scale,
 		map->tile_sz * map->scale, color});
 }
-
-void	draw_transparency(t_map *map, int x, int y, int color)
-{
-	if (color != sp_pixel_get_color(&map->txtrs[4], 0, 0))
-		img_pix_put(&map->img, x, y, color);
-}
