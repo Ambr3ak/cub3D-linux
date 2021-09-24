@@ -70,7 +70,7 @@ INC	=	-I inc -I ${MLX_D}
 
 CC	=	clang
 
-CFLAGS	=	-Wall -Werror -Wextra
+CFLAGS	=	-Wall -Werror -Wextra -g -fsanitize=address,undefined
 
 MLX_D	=	mlx
 

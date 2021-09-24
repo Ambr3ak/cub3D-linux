@@ -4,7 +4,7 @@ WE ./txts/green.xpm
 EA ./txts/red.xpm
 
 
-F 2000000, 238, 255
+F -10000, 238, 255
 C 74, 39, 0
 
 

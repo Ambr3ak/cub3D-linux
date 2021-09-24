@@ -17,7 +17,7 @@ int	ft_atoi_color(char *str, int *i, int *res)
 	while (str[*i] == ' ' || (str[*i] > 8 && str[*i] < 14) || str[*i] == ',')
 		(*i)++;
 	if (str[*i] == '-' || str[*i] == '+')
-		return (0);
+		return (*res = -1);
 	while (str[*i] >= '0' && str[*i] <= '9')
 	{
 		(*res) = *res * 10 + str[*i] - '0';
