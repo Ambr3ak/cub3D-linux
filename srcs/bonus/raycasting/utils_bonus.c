@@ -24,17 +24,3 @@ void	draw_transparency(t_map *map, int x, int y, int color)
 	if (color != sp_pixel_get_color(&map->txtrs[4], 0, 0))
 		img_pix_put(&map->img, x, y, color);
 }
-
-int	has_sprite_at(float x, float y, t_map *map)
-{
-	int	map_index_x;
-	int	map_index_y;
-
-	if (x < 0 || y < 0)
-		return (FALSE);
-	map_index_x = floor(x / map->tile_sz);
-	map_index_y = floor(y / map->tile_sz);
-	if (x >= map->num_col * map->tile_sz || y >= map->num_row * map->tile_sz)
-		return (FALSE);
-	return (map->map[map_index_y][map_index_x] == '2');
-}

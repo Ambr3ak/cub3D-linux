@@ -33,6 +33,7 @@
 void	init_struc(t_map *map);
 int		init_map_struc(t_map *map, char **str, int i);
 void	setup(t_map *map, t_play *play, t_tmp *tmp);
+int		all_id(t_map *map);
 
 int		ft_strlen2(char **map, int y);
 int		ft_strcmp(char *s1, char *s2);

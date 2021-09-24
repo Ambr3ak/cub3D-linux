@@ -23,7 +23,7 @@ int	check_id(t_map *map, t_cub *tab, char *str, int *j)
 		tab->error = check_texture(map, &tab->path_we, j, &tab->we);
 	else if (tab->we == 1 && str[*j] == 'E')
 		tab->error = check_texture(map, &tab->path_ea, j, &tab->ea);
-	 else if (tab->ea == 1 && str[*j] == 'F')
+	else if (tab->ea == 1 && str[*j] == 'F')
 		tab->error = check_color(map->color, map->str, &tab->f, j);
 	else if (tab->f == 1 && str[*j] == 'C')
 		tab->error = check_color(map->color, map->str, &tab->c, j);
@@ -37,7 +37,7 @@ int	check_id(t_map *map, t_cub *tab, char *str, int *j)
 int	ft_id(int c)
 {	
 	return (c == 'N' || c == 'S' || c == 'F' || c == 'C' || c == 'W'
-		|| c == 'E');
+		|| c == 'E' || c == '\0' || c == '1');
 }
 
 void	fill_txt(t_map *map, t_img *txts, char *path)
@@ -55,7 +55,9 @@ int	ft_parsing_cub(t_cub *tab, char *str, t_map *map)
 	i = 0;
 	while (str[i] == ' ')
 		i++;
-	if (ft_id(str[i]))
+	if (!all_id(map))
 		check_id(map, tab, str, &i);
+	else if (!ft_id(str[i]))
+		return (-6);
 	return (tab->error);
 }

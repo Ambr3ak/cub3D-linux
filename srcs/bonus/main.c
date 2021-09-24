@@ -73,7 +73,7 @@ void	init_parser(t_map *map, char *s, int fd)
 	{
 		ret = get_next_line(map, fd, &line);
 		map->tab->pars[i] = ft_strdup(map, line);
-		ft_parsing_cub(map->tab, map->tab->pars[i], map);
+		map->tab->error = ft_parsing_cub(map->tab, map->tab->pars[i], map);
 		if (all_id(map))
 			if (map->tab->pars[i][0] == '1' || map->tab->pars[i][0] == ' ')
 				map->num_row++;
