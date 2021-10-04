@@ -90,7 +90,6 @@ int		pixel_get_color(t_img *txtrs, int x, int y);
 void	norm_angle(float *angle);
 float	distance_points(float x1, float y1, float x2, float y2);
 
-
 void	load_textures(t_cub *tab, t_map *map);
 
 void	scale_calc(t_map *map);

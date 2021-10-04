@@ -29,7 +29,6 @@
 # define TRUE 1
 # define TEX_H 64
 
-
 typedef struct s_data
 {
 	float	texel_w;
