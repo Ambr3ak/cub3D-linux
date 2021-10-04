@@ -60,4 +60,5 @@ void	cast_all_rays(t_map *map)
 		map->rays[col].ray_right = ray_right(ray_angle);
 		col++;
 	}
+	printf("ray distance %f\n", map->rays[col/2].distance);
 }

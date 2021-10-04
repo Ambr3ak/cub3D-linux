@@ -72,7 +72,7 @@ int	ft_parse_map(t_map *map)
 		{
 			if (ft_strrchr("013NSWE ", map->map[y][x]))
 			{
-				if (map->map[y][x] == '0')
+				if (map->map[y][x] == '0' || ft_strrchr("NSWE", map->map[y][x]))
 					if (ft_check_wall(map->map, y, x) < 0)
 						return (-5);
 			}

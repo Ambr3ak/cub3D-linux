@@ -72,6 +72,8 @@ void	generate_proj(t_map *map, t_recup *recup)
 	{
 		perp_distance = map->rays[recup->i].distance
 			 * cos(map->rays[recup->i].ray_angle - map->play->rot_angle);
+		if (recup->i == map->num_rays / 2)
+			printf("perp %f\n", perp_distance);
 		if (perp_distance == 0)
 			perp_distance = 1;
 		prj_wall_h = (map->tile_sz / perp_distance)

@@ -15,17 +15,17 @@
 int	check_id(t_map *map, t_cub *tab, char *str, int *j)
 {
 	map->str = ft_strdup(map, str);
-	if (tab->no == 0 && str[*j] == 'N')
+	if (str[*j] == 'N')
 		tab->error = check_texture(map, &tab->path_no, j, &tab->no);
-	else if (tab->no == 1 && str[*j] == 'S' && str[(*j) + 1] == 'O')
+	else if (str[*j] == 'S' && str[(*j) + 1] == 'O')
 		tab->error = check_texture(map, &tab->path_so, j, &tab->so);
-	else if (tab->so == 1 && str[*j] == 'W')
+	else if (str[*j] == 'W')
 		tab->error = check_texture(map, &tab->path_we, j, &tab->we);
-	else if (tab->we == 1 && str[*j] == 'E')
+	else if (str[*j] == 'E')
 		tab->error = check_texture(map, &tab->path_ea, j, &tab->ea);
-	else if (tab->ea == 1 && str[*j] == 'F')
+	else if (str[*j] == 'F')
 		tab->error = check_color(map->color, map->str, &tab->f, j);
-	else if (tab->f == 1 && str[*j] == 'C')
+	else if (str[*j] == 'C')
 		tab->error = check_color(map->color, map->str, &tab->c, j);
 	else if (str[*j] == '\0')
 		return (tab->error = 0);
