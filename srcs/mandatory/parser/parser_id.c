@@ -15,17 +15,17 @@
 int	check_id(t_map *map, t_cub *tab, char *str, int *j)
 {
 	map->str = ft_strdup(map, str);
-	if (str[*j] == 'N')
+	if (tab->no == 0 && str[*j] == 'N')
 		tab->error = check_texture(map, &tab->path_no, j, &tab->no);
-	else if (str[*j] == 'S' && str[(*j) + 1] == 'O')
+	else if (tab->so == 0 && str[*j] == 'S' && str[(*j) + 1] == 'O')
 		tab->error = check_texture(map, &tab->path_so, j, &tab->so);
-	else if (str[*j] == 'W')
+	else if (tab->we == 0 && str[*j] == 'W')
 		tab->error = check_texture(map, &tab->path_we, j, &tab->we);
-	else if (str[*j] == 'E')
+	else if (tab->ea == 0 && str[*j] == 'E')
 		tab->error = check_texture(map, &tab->path_ea, j, &tab->ea);
-	else if (str[*j] == 'F')
+	else if (tab->f == 0 && str[*j] == 'F')
 		tab->error = check_color(map->color, map->str, &tab->f, j);
-	else if (str[*j] == 'C')
+	else if (tab->c == 0 && str[*j] == 'C')
 		tab->error = check_color(map->color, map->str, &tab->c, j);
 	else if (str[*j] == '\0')
 		return (tab->error = 0);
@@ -55,9 +55,8 @@ int	ft_parsing_cub(t_cub *tab, char *str, t_map *map)
 	i = 0;
 	while (str[i] == ' ')
 		i++;
-	if (!all_id(map))
-		check_id(map, tab, str, &i);
-	else if (!ft_id(str[i]))
-		return (-6);
+	check_id(map, tab, str, &i);
+	if (str[i] == '1' && all_id(map))
+		return (0);
 	return (tab->error);
 }

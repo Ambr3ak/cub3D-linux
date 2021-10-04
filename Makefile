@@ -1,4 +1,4 @@
-NAME  = Cub3D
+NAME  = cub3D
 
 SRCS	= ./srcs/mandatory/parser/ft_check_all.c \
 			./srcs/mandatory/parser/ft_check_color.c \
@@ -70,7 +70,7 @@ INC	=	-I inc -I ${MLX_D}
 
 CC	=	clang
 
-CFLAGS	=	-Wall -Werror -Wextra -g -fsanitize=address,undefined
+CFLAGS	=	-Wall -Werror -Wextra
 
 MLX_D	=	mlx
 

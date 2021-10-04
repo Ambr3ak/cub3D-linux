@@ -47,6 +47,10 @@ int	ft_get_color(char *str, int *i, t_color *color, int index)
 	ft_atoi_color(str, i, &color[index].r);
 	ft_atoi_color(str, i, &color[index].g);
 	ft_atoi_color(str, i, &color[index].b);
+	while (str[*i] == ' ')
+		(*i)++;
+	if (str[*i] != '\0')
+		return (-4);
 	if (ft_atoi_color(str, i, &tmp) != 0
 		|| ft_control_color(color[index].r, color[index].g, color[index].b)
 		|| color[index].r < 0 || color[index].g < 0 || color[index].b < 0)
@@ -64,13 +68,13 @@ int	check_color(t_color *color, char *str, int *check, int *j)
 	{
 		error = ft_get_color(str, j, color, 0);
 		if (!(error))
-			(*check)++;
+			(*check) = 1;
 	}
 	else
 	{
 		error = ft_get_color(str, j, color, 1);
 		if (!(error))
-			(*check)++;
+			(*check) = 1;
 	}
 	return (error);
 }

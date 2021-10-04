@@ -54,9 +54,10 @@ int	ft_check_argv(char *map_name)
 
 int	all_id(t_map *map)
 {
-	return (map->tab->so && map->tab->we
-		&& map->tab->no && map->tab->ea && map->tab->c
-		&& map->tab->f);
+	return (map->tab->so == 1 && map->tab->we == 1
+		&& map->tab->no == 1 && map->tab->ea == 1
+		&& map->tab->c == 1
+		&& map->tab->f == 1);
 }
 
 void	init_parser(t_map *map, char *s, int fd)
